@@ -1,0 +1,51 @@
+{% block content %}
+<nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="{% url 'home'%}">
+        <h1 class="is-size-3-desktop has-text-weight-bold pl-5 is-family-code">Letwatch.</h1>
+      </a>
+      <div class="navbar-burger js-burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="{% url 'home' %}"> Home </a>
+      </div>
+  
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <div class="field is-grouped">
+            <p class="control">
+              <a
+                class="bd-tw-button button"
+                data-social-network="Twitter"
+                data-social-action="tweet"
+                data-social-target="https://twitter.com/Official_ryder0"
+                target="_blank"
+                href="https://twitter.com/Official_ryder0"
+              >
+                <span class="icon">
+                  <i class="fab fa-twitter"></i>
+                </span>
+                <span> Tweet </span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="button is-primary" href="/">
+                <span class="icon">
+                  <i class="fas fa-download"></i>
+                </span>
+                <span>Feedback</span>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</nav>
+{% endblock %}

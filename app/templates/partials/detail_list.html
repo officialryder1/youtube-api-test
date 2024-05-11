@@ -1,0 +1,33 @@
+{% extends 'partials/base.html' %}
+{% block content %}
+{% if video %}
+<header class="hero">
+    <div class="hero-body">
+      <p class="title">{{video.title}}</p>
+      <p class="subtitle">{{query}}</p>
+    </div>
+</header>
+<section class="container fixed-grid has-2-cols-mobile">
+    <div class="card container">
+        <div class="card-image container cell">
+          <figure class="columns is-centered is-0-mobile">
+            <iframe width="500" height="380" src="{{video.url}}" frameborder="0" allowfullscreen class=""></iframe>
+          </figure>
+        </div>
+    </div>
+    <div class="card cell">
+        <h3>Description :</h3>
+        <p> {{video.description|slice:200}}</p>
+        <p>Channel : {{video.channelTitle}}</p>
+        <p><small>Length : {{video.time}} min - Quality : {{video.definition}}</small></p>
+        <p><small class="text-muted">Published On: {{video.publishedAt}}</small></p>  
+        <footer class="card-footer">
+          <a href="#" class="card-footer-item">Prev</a>
+          <a href="#" class="card-footer-item">Don't</a>
+          <a href="#" class="card-footer-item">Next</a>
+        </footer>
+    </div>
+</section>
+{% endif %}
+{% endblock %}
+{% include 'partials/footer.html' %}
