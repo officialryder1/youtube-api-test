@@ -80,13 +80,23 @@ WSGI_APPLICATION = 'main.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': config("POSTGRES_DATABASE"),
+        'USER': config("POSTGRES_USER"),
+        'PASSWORD': config("POSTGRES_PASSWORD"),
+        'HOST': config("POSTGRES_HOST"),
+        'PORT': '5432',
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/5.0/ref/settings/#auth-password-validators
@@ -138,3 +148,11 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MY_API_KEY = config("API_KEY")
+POSTGRES_URL= config("POSTGRES_URL")
+POSTGRES_PRISMA_URL=config("POSTGRES_PRISMA_URL")
+POSTGRES_URL_NO_SSL=config("POSTS_URL_NO_SSL")
+POSTGRES_URL_NON_POOLING=config("POSTGRES_URL_NON_POOLING")
+POSTGRES_USER=config("POSTGRES_USER")
+POSTGRES_HOST=config("POSTGRES_HOST")
+POSTGRES_PASSWORD=config("POSTGRES_PASSWORD")
+POSTGRES_DATABASE=config("POSTGRES_DATABASE")
