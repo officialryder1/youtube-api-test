@@ -8,13 +8,14 @@
     {% include 'partials/detail_list.html' %}
     <div class="container">
       <h1 class="title mb-2" style="text-align: center;">
-        Are you feeling bored ?<br> Let's get your recommedation of video to watch
+        Are you feeling bored ?<br> Let's get your recommendation of video to watch
       </h1>
       <p class="subtitle" style="text-align: center;">
         What category do you want to watch ?  <br><br><strong>check below <i class="fa fa-arrow-down"></i></strong> 
       </p>
     </div><br><br>
-    <d class="grid ct-5 p-5 is-justify-content-center"> 
+    
+    <div class="grid ct-5 p-5 is-justify-content-center"> 
       <div class="grid is-col-min-5">
           {% for category in category %}
           <a class="button is-danger is-outlined s-large is-fullwidth is-responsive cell m-2" hx-get="{% url 'search' category.name %}" hx-target="#detail_list" hx-push-url="{% url 'search' category.name %}">{{category.name}}</a>
@@ -22,8 +23,6 @@
       </div>
     </div>
 </section>
-
-
 
 {% include 'partials/footer.html' %}
 {% endblock %}
