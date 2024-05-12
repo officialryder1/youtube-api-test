@@ -9,7 +9,7 @@ api_key = settings.MY_API_KEY
 
 
 def home(request):
-    category = Category.objects.all()
+    category = Category.objects.all().order_by('?')
     
     context = {
         'category':category
