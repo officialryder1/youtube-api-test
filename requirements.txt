@@ -2,6 +2,8 @@ asgiref==3.8.1
 cachetools==5.3.3
 certifi==2024.2.2
 charset-normalizer==3.3.2
+click==8.1.7
+colorama==0.4.6
 dj-database-url==2.1.0
 Django==5.0.6
 google-api-core==2.19.0
@@ -10,10 +12,13 @@ google-auth==2.29.0
 google-auth-httplib2==0.2.0
 google-auth-oauthlib==1.2.0
 googleapis-common-protos==1.63.0
+gunicorn==22.0.0
+h11==0.14.0
 httplib2==0.22.0
 idna==3.7
 isodate==0.6.1
 oauthlib==3.2.2
+packaging==24.0
 pillow==10.3.0
 proto-plus==1.23.0
 protobuf==4.25.3
@@ -32,4 +37,5 @@ typing_extensions==4.11.0
 tzdata==2024.1
 uritemplate==4.1.1
 urllib3==2.2.1
+uvicorn==0.29.0
 whitenoise==6.6.0
