@@ -41,7 +41,7 @@ def search(request, name):
         'part' : 'snippet',
         'q' : query,
         'safeSearch' : 'none',
-        'maxResults' : 10,
+        'maxResults' : 60,
         'key' : api_key,
         'type' : 'video',
     }

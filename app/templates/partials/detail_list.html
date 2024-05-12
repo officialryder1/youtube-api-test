@@ -21,13 +21,13 @@
         <p>Channel : {{video.channelTitle}}</p>
         <p><small>Length : {{video.time}} min - Quality : {{video.definition}}</small></p>
         <p><small class="text-muted">Published On: {{video.publishedAt}}</small></p>  
-        <footer class="card-footer">
+        <!-- <section class="card-footer">
           <a href="#" class="card-footer-item">Prev</a>
           <a href="#" class="card-footer-item">Don't</a>
           <a href="#" class="card-footer-item">Next</a>
-        </footer>
+        </section> -->
     </div>
+    {% include 'partials/footer.html' %}
 </section>
 {% endif %}
 {% endblock %}
-{% include 'partials/footer.html' %}
